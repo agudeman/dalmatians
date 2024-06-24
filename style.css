@@ -1,0 +1,117 @@
+body {
+    background-color: #f8f9f9;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    height: 100vh; /* body takes full viewport of height */
+    background-image: url("photos/dots.jpg");
+    background-repeat: repeat;
+}
+
+/* sidebar should not move. light color. have links. maybe add a picture or something to fill in space. */
+.sidebar {
+    width: 25%;
+    background-color: #cacfd2;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    box-shadow: 0 4px 8px #717d7e; /* Added shadow */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    position: relative;
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #a93226; /* Corrected border color */
+    box-shadow: 0 4px 8px #cd6155;
+    background-color: white;
+    overflow-y: auto; /* scroll bar will appear if content overflows */
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content .number {
+    font-weight: bold;
+    color: #a93226;
+    margin-right: 10px;
+}
+
+/* buildddddd a custom scrollbar. make that ish pretty */
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #cacfd2; /* match sidebar background? */
+    box-shadow: inset 0 0 6px #717d7e; /* match sidebar shadow? */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #a93226;
+    border-radius: 10px;
+    border: 3px solid #cacfd2;
+}
+
+/* make the pictures look better on page */
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+.sidebar p{
+    text-align:justify;
+    text-align: center;
+}
+
+.sidebar .icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color;
+}
+
+.sidebar a:hover {
+    color: #a93226;
+    text-decoration: underline;
+}
